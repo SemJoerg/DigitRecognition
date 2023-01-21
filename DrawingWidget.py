@@ -10,7 +10,7 @@ class DrawingWidget(QLabel):
         self.setMinimumSize(128, 128)
         self.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.__image_size = 32
+        self.__image_size = 24
         self.brush_size = 2
 
         # Creates White/Black image |   1 = White    0 = Black
@@ -21,6 +21,10 @@ class DrawingWidget(QLabel):
     def update_image(self) -> None:
         self.setPixmap(QPixmap(self.image).scaled(self.size(), Qt.AspectRatioMode.KeepAspectRatio))
 
+    def clear_image(self) -> None:
+        self.image.fill(1)
+        self.update_image()
+
     def draw_point_on_image(self, x: int, y: int) -> None:
         painter = QPainter(self.image)
         painter.setPen(QPen(Qt.GlobalColor.black, self.brush_size, Qt.PenStyle.SolidLine))
@@ -28,13 +32,13 @@ class DrawingWidget(QLabel):
         painter.end()
         self.update_image()
 
-    def try_drawing_labelpoint(self, ev_x: int, ev_y: int) -> None:
+    def try_drawing_labelpoint(self, label_x: int, label_y: int) -> None:
         pixmap_width = self.pixmap().size().width()
         pixmap_height = self.pixmap().size().height()
         delta_x = int((self.size().width() - pixmap_width) / 2)
         delta_y = int((self.size().height() - pixmap_height) / 2)
-        pixmap_x = ev_x - delta_x
-        pixmap_y = ev_y - delta_y
+        pixmap_x = label_x - delta_x
+        pixmap_y = label_y - delta_y
 
         if pixmap_x < 0 or pixmap_y < 0 or pixmap_x > pixmap_width or pixmap_y > pixmap_height:
             return
@@ -48,9 +52,9 @@ class DrawingWidget(QLabel):
     def resizeEvent(self, event: QResizeEvent) -> None:
         self.update_image()
 
-    def mouseMoveEvent(self, ev: QMouseEvent) -> None:
-        self.try_drawing_labelpoint(ev.x(), ev.y())
+    def mouseMoveEvent(self, event: QMouseEvent) -> None:
+        self.try_drawing_labelpoint(event.x(), event.y())
 
-    def mousePressEvent(self, ev: QMouseEvent) -> None:
-        self.try_drawing_labelpoint(ev.x(), ev.y())
+    def mousePressEvent(self, event: QMouseEvent) -> None:
+        self.try_drawing_labelpoint(event.x(), event.y())
 
