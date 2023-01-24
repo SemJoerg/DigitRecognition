@@ -1,6 +1,6 @@
-from PySide6.QtWidgets import QMainWindow, QMenu, QToolBar, QLabel, QLineEdit, QPushButton
+from PySide6.QtWidgets import QMainWindow, QMenu, QToolBar, QLabel, QComboBox, QPushButton
 from PySide6.QtCore import Qt, QSize
-from PySide6.QtGui import QAction, QKeySequence
+from PySide6.QtGui import QAction, QKeySequence, QFont
 from DrawingWidget import DrawingWidget
 from DataHandler import DataHandler
 
@@ -10,7 +10,9 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.drawing = DrawingWidget()
-        self.data_handler = DataHandler("data.csv")
+        self.data_handler = DataHandler("data.npz", self.drawing.get_image_size())
+        font = QFont()
+        font.setPointSize(13)
 
         # Menubar
         self.setWindowTitle("DigitRecognition")
@@ -21,7 +23,7 @@ class MainWindow(QMainWindow):
         # Actions
         self.clear_drawing_action = QAction("Clear drawing")
         self.clear_drawing_action.setToolTip("Shortcut: C")
-        self.clear_drawing_action.setShortcut(QKeySequence("C"))
+        self.clear_drawing_action.setShortcut(QKeySequence("Backspace"))
         self.clear_drawing_action.triggered.connect(self.clear_drawing_action_triggered)
         self.menu_bar.addAction(self.clear_drawing_action)
 
@@ -33,14 +35,23 @@ class MainWindow(QMainWindow):
 
         # Toolbars
         self.generate_data_toolbar = QToolBar("Generate data")
-        self.generate_data_toolbar.setIconSize(QSize(15, 15))
-
-        self.generate_data_toolbar.addWidget(QLabel("Classification: "))
-        self.classification_lineedit = QLineEdit()
-        self.generate_data_toolbar.addWidget(self.classification_lineedit)
+        self.classificationn_label = QLabel("Classification: ")
+        self.generate_data_toolbar.addWidget(self.classificationn_label)
+        self.classification_combobox = QComboBox()
+        self.classification_combobox.addItems(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'])
+        self.generate_data_toolbar.addWidget(self.classification_combobox)
         self.add_to_datafile_btn = QPushButton("Add to datafile")
         self.add_to_datafile_btn.pressed.connect(self.add_to_datafile_btn_pressed)
+        self.add_to_datafile_btn.setShortcut(QKeySequence("Enter"))
         self.generate_data_toolbar.addWidget(self.add_to_datafile_btn)
+
+        self.plot_data_btn = QPushButton("Plot first 100 entries")
+        self.plot_data_btn.pressed.connect(self.plot_data_btn_pressed)
+        self.generate_data_toolbar.addWidget(self.plot_data_btn)
+
+        self.classificationn_label.setFont(font)
+        self.classification_combobox.setFont(font)
+        self.add_to_datafile_btn.setFont(font)
 
         self.test_data_toolbar = QToolBar("Test data")
         self.generate_data_action.trigger()
@@ -62,5 +73,8 @@ class MainWindow(QMainWindow):
         self.drawing.clear_image()
 
     def add_to_datafile_btn_pressed(self):
-        self.data_handler.add_data_to_file(self.drawing.image, self.classification_lineedit.text())
+        self.data_handler.add_data_to_file(self.drawing.image, int(self.classification_combobox.currentText()))
         self.drawing.clear_image()
+
+    def plot_data_btn_pressed(self):
+        self.data_handler.plot_data()

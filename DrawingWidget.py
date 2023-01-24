@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QLabel
 from PySide6.QtGui import QImage, QPixmap, QResizeEvent, QPainter, QPen, QMouseEvent
 from PySide6.QtCore import Qt
+import copy
 
 
 class DrawingWidget(QLabel):
@@ -17,6 +18,9 @@ class DrawingWidget(QLabel):
         self.image = QImage(self.__image_size, self.__image_size, QImage.Format.Format_Mono)
         self.image.fill(1)
         self.update_image()
+
+    def get_image_size(self) -> int:
+        return copy.copy(self.__image_size)
 
     def update_image(self) -> None:
         self.setPixmap(QPixmap(self.image).scaled(self.size(), Qt.AspectRatioMode.KeepAspectRatio))
@@ -57,4 +61,3 @@ class DrawingWidget(QLabel):
 
     def mousePressEvent(self, event: QMouseEvent) -> None:
         self.try_drawing_labelpoint(event.x(), event.y())
-
