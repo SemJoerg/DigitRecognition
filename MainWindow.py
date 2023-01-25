@@ -2,7 +2,7 @@ from PySide6.QtWidgets import QMainWindow, QMenu, QToolBar, QLabel, QComboBox, Q
 from PySide6.QtCore import Qt, QSize
 from PySide6.QtGui import QAction, QKeySequence, QFont
 from DrawingWidget import DrawingWidget
-from DataHandler import DataHandler
+from data_handler import DataHandler
 
 
 class MainWindow(QMainWindow):
@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.drawing = DrawingWidget()
-        self.data_handler = DataHandler("data.npz", self.drawing.get_image_size())
+        self.data_handler = DataHandler("data.npz")
         font = QFont()
         font.setPointSize(13)
 
