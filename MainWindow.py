@@ -1,8 +1,11 @@
-from PySide6.QtWidgets import QMainWindow, QMenu, QToolBar, QLabel, QComboBox, QPushButton
+from PySide6.QtWidgets import QMainWindow, QMenu, QToolBar, QLabel, QComboBox, QPushButton, QMessageBox
 from PySide6.QtCore import Qt, QSize
 from PySide6.QtGui import QAction, QKeySequence, QFont
 from DrawingWidget import DrawingWidget
 from data_handler import DataHandler
+import tensorflow as tf
+import numpy as np
+from tensorflow import keras
 
 
 class MainWindow(QMainWindow):
@@ -11,6 +14,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.drawing = DrawingWidget()
         self.data_handler = DataHandler("data.npz")
+        self.model: keras.models.Model = keras.models.load_model("./models/main_model")
         font = QFont()
         font.setPointSize(13)
 
@@ -54,8 +58,14 @@ class MainWindow(QMainWindow):
         self.add_to_datafile_btn.setFont(font)
 
         self.test_data_toolbar = QToolBar("Test data")
-        self.generate_data_action.trigger()
+        self.detect_digit_btn = QPushButton("Detect Digit")
+        self.detect_digit_btn.pressed.connect(self.detect_digit_btn_pressed)
+        self.detect_digit_btn.setFont(font)
+        self.detect_digit_btn.setShortcut("Space")
+        self.test_data_toolbar.addWidget(self.detect_digit_btn)
 
+
+        self.test_data_action.trigger()
         self.setCentralWidget(self.drawing)
         self.show()
 
@@ -78,3 +88,9 @@ class MainWindow(QMainWindow):
 
     def plot_data_btn_pressed(self):
         self.data_handler.plot_data()
+
+    def detect_digit_btn_pressed(self):
+        prediction_data: np.ndarray = self.model.predict(np.array([DataHandler.image_to_nparray(self.drawing.image)], dtype=np.int8))
+        prediction = np.argmax(prediction_data)
+        QMessageBox.information(self, "Prediction", f"You draw a {prediction}")
+        self.drawing.clear_image()

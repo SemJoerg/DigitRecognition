@@ -18,16 +18,21 @@ class DataHandler:
             self.label_data: np.ndarray = data["arr_1"]
             #print(f"Data ({self.image_data.shape}):\n{self.image_data}\nLabels:\n{self.label_data}")
 
-    def save_data(self):
-        np.savez(self.file_path, self.image_data, self.label_data)
-        print(f"Data ({self.image_data.shape}):\n{self.image_data}\nLabels:\n{self.label_data}")
-
-    def add_data_to_file(self, image: QImage, label: int) -> None:
+    @staticmethod
+    def image_to_nparray(image: QImage) -> np.ndarray:
         pixels = np.empty((image.height(), image.width()), np.int8)
         for row in range(image.height()):
             for colum in range(image.width()):
                 pixel = 1 if image.pixel(colum, row) == 4294967295 else 0
                 pixels[row, colum] = pixel
+        return pixels
+
+    def save_data(self):
+        np.savez(self.file_path, self.image_data, self.label_data)
+        print(f"Data ({self.image_data.shape}):\n{self.image_data}\nLabels:\n{self.label_data}")
+
+    def add_data_to_file(self, image: QImage, label: int) -> None:
+        pixels = DataHandler.image_to_nparray(image)
 
         if self.image_data is None:
             self.image_data = np.array([pixels], dtype=np.int8)

@@ -2,7 +2,7 @@ import os
 import numpy as np
 from data_handler import DataHandler
 
-main_data = DataHandler("__main_data__.npz")
+main_data = DataHandler("main_data_shuffeled.npz")
 
 files = []
 for file in os.listdir("./DigitData"):
