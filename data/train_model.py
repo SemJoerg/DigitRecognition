@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow import keras
 from data_handler import DataHandler
 
-class_names = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+labels = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 train_data = DataHandler("train_data.npz")
 test_data = DataHandler("test_data.npz")
@@ -24,4 +24,4 @@ model.fit(train_data.image_data, train_data.label_data, epochs=400)
 test_loss, test_acc = model.evaluate(test_data.image_data, test_data.label_data)
 
 print("Test accuracy: ", test_acc)
-model.save("../main5_model")
+model.save("../main_model")

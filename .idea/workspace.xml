@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b0de2ff-af4c-4f43-8960-8b83a40b2cd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/train_model.py" afterDir="false" />
+    <list default="true" id="3b0de2ff-af4c-4f43-8960-8b83a40b2cd3" name="Changes" comment="added presentation">
+      <change beforePath="$PROJECT_DIR$/.idea/DigitRecognition.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DigitRecognition.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainWindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/DigitData.zip" beforeDir="false" afterPath="$PROJECT_DIR$/data/DigitData/DigitData.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/__main_data__.npz" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_unshuffled.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/select_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/select_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/train_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/main_model/fingerprint.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/main_model_bak/fingerprint.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/main_model/keras_metadata.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/main_model_bak/keras_metadata.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/main_model/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/main_model_bak/saved_model.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/main_model/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/models/main_model_bak/variables/variables.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/main_model/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/models/main_model_bak/variables/variables.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/formeln.docx" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/formeln.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/presentation.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/presentation.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/~$ormeln.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +43,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sem/PycharmProjects/DigitRecognition/data/select_data.py&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sem/PycharmProjects/DigitRecognition/main.py&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -47,6 +52,7 @@
       <recent name="$PROJECT_DIR$/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sem\PycharmProjects\DigitRecognition\models" />
       <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$/data/DigitData" />
     </key>
@@ -59,8 +65,8 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
-      <option name="SDK_NAME" value="Python 3.10 (venv)" />
+      <option name="SDK_HOME" value="C:\Users\Sem\PycharmProjects\DigitRecognition\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.11 (DigitRecognition)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -81,10 +87,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
-      <option name="SDK_NAME" value="Python 3.10 (venv)" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/select_data.py" />
@@ -103,10 +108,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
-      <option name="SDK_NAME" value="Python 3.10 (venv)" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/train_model.py" />
@@ -120,8 +124,8 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.train_model" />
       <item itemvalue="Python.select_data" />
+      <item itemvalue="Python.train_model" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -133,6 +137,14 @@
       <option name="presentableId" value="Default" />
       <updated>1674398733382</updated>
     </task>
+    <task id="LOCAL-00001" summary="added presentation">
+      <created>1681674819790</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681674819790</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,5 +157,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added presentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="added presentation" />
   </component>
 </project>
