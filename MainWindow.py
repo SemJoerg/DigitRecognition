@@ -17,6 +17,8 @@ class MainWindow(QMainWindow):
         self.model: keras.models.Model = keras.models.load_model("./models/main_model")
         font = QFont()
         font.setPointSize(13)
+        font2 = QFont()
+        font2.setPointSize(35)
 
         # Menubar
         self.setWindowTitle("DigitRecognition")
@@ -59,10 +61,13 @@ class MainWindow(QMainWindow):
 
         self.test_data_toolbar = QToolBar("Test data")
         self.detect_digit_btn = QPushButton("Detect Digit")
+        self.number_label = QLabel("")
+        self.number_label.setFont(font2)
         self.detect_digit_btn.pressed.connect(self.detect_digit_btn_pressed)
         self.detect_digit_btn.setFont(font)
         self.detect_digit_btn.setShortcut("Space")
         self.test_data_toolbar.addWidget(self.detect_digit_btn)
+        self.test_data_toolbar.addWidget(self.number_label)
 
 
         self.test_data_action.trigger()
@@ -92,5 +97,6 @@ class MainWindow(QMainWindow):
     def detect_digit_btn_pressed(self):
         prediction_data: np.ndarray = self.model.predict(np.array([DataHandler.image_to_nparray(self.drawing.image)], dtype=np.int8))
         prediction = np.argmax(prediction_data)
-        QMessageBox.information(self, "Prediction", f"You draw a {prediction}")
+        #QMessageBox.information(self, "Prediction", f"You draw a {prediction}")
+        self.number_label.setText(f"  {prediction}")
         self.drawing.clear_image()

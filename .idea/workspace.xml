@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b0de2ff-af4c-4f43-8960-8b83a40b2cd3" name="Changes" comment="added &quot;Lernnverfahren&quot; slides to presentation.pptx and retrained main model">
-      <change afterPath="$PROJECT_DIR$/models/main_model_bak/fingerprint.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/main_model_bak/keras_metadata.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/main_model_bak/saved_model.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/main_model_bak/variables/variables.data-00000-of-00001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/main_model_bak/variables/variables.index" afterDir="false" />
+    <list default="true" id="3b0de2ff-af4c-4f43-8960-8b83a40b2cd3" name="Changes" comment="finished presentation.pptx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/presentation.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/presentation.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainWindow.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682377696533</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finished presentation.pptx">
+      <created>1682468840067</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682468840067</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,6 +165,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added presentation" />
     <MESSAGE value="added &quot;Lernnverfahren&quot; slides to presentation.pptx and retrained main model" />
-    <option name="LAST_COMMIT_MESSAGE" value="added &quot;Lernnverfahren&quot; slides to presentation.pptx and retrained main model" />
+    <MESSAGE value="finished presentation.pptx" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished presentation.pptx" />
   </component>
 </project>
