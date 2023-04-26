@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b0de2ff-af4c-4f43-8960-8b83a40b2cd3" name="Changes" comment="added presentation">
-      <change beforePath="$PROJECT_DIR$/.idea/DigitRecognition.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DigitRecognition.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3b0de2ff-af4c-4f43-8960-8b83a40b2cd3" name="Changes" comment="added &quot;Lernnverfahren&quot; slides to presentation.pptx and retrained main model">
+      <change afterPath="$PROJECT_DIR$/models/main_model_bak/fingerprint.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/main_model_bak/keras_metadata.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/main_model_bak/saved_model.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/main_model_bak/variables/variables.data-00000-of-00001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/main_model_bak/variables/variables.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/train_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/main_model/fingerprint.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/main_model_bak/fingerprint.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/main_model/keras_metadata.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/main_model_bak/keras_metadata.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/main_model/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/main_model_bak/saved_model.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/main_model/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/models/main_model_bak/variables/variables.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/main_model/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/models/main_model_bak/variables/variables.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/formeln.docx" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/formeln.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/presentation/presentation.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/presentation.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/~$ormeln.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +38,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sem/PycharmProjects/DigitRecognition/main.py&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sem/PycharmProjects/DigitRecognition&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -144,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681674819790</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added &quot;Lernnverfahren&quot; slides to presentation.pptx and retrained main model">
+      <created>1682377696533</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682377696533</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +162,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added presentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added presentation" />
+    <MESSAGE value="added &quot;Lernnverfahren&quot; slides to presentation.pptx and retrained main model" />
+    <option name="LAST_COMMIT_MESSAGE" value="added &quot;Lernnverfahren&quot; slides to presentation.pptx and retrained main model" />
   </component>
 </project>
